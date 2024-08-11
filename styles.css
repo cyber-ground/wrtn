@@ -272,7 +272,7 @@ body {
 }
 .container footer {
   width: 100%;
-  height: 3vh;
+  height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,13 +282,16 @@ body {
   letter-spacing: 1px;
   margin-top: 1vw;
   transition: 0.5s;
+  padding: 3px 0 0;
 }
 .container footer .footerText {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: clamp(0.8em, 2vw, 1em);
 }
 .container footer .footerText .copy {
   padding: 5px 5px 0;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  font-size: clamp(1.2em, 2vw, 1.5em);
 }
