@@ -15,6 +15,7 @@ import {console_color,console_red,console_orange,console_yellow,console_green,
 	});
 
 	const columns = document.querySelectorAll('.column');
+	function initColumnsFlex() {
 		columns.forEach((column, index) => {
 			if(index === 0 
 				|| index === 1) {
@@ -28,6 +29,7 @@ import {console_color,console_red,console_orange,console_yellow,console_green,
 				column.style.flex = .5;
 			}
 		});
+	} initColumnsFlex();
 
 	let weightValue = 20;
 	let fontWeight = 100;
@@ -104,6 +106,24 @@ import {console_color,console_red,console_orange,console_yellow,console_green,
 	// 		char.style.color = '#00eeffb3';
 	// 	} else { char.style.color = '#000'}
 	// }
+
+
+	const anchors = document.querySelectorAll('a');
+	anchors.forEach(anchor => {
+		anchor.addEventListener('click', (e) => {
+			lenis.stop();
+				texts.forEach(text => {
+					text.querySelectorAll('.char').forEach(char => {
+						fontWeight = 100;
+						char.style.fontWeight = fontWeight;
+						result = 0;
+						rotateColorWithResult(char);
+					});
+				});
+				initColumnsFlex();
+				lenis.start();
+		});
+	});
 
 
 
